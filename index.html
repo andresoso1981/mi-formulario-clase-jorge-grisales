@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f2f2f2;
+          margin: 0;
+          padding: 0;
+        }
+      
+        h2 {
+          text-align: center;
+          color: #333;
+        }
+      
+        form {
+          max-width: 400px;
+          margin: 0 auto;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+      
+        label {
+          font-weight: bold;
+        }
+      
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="submit"],
+        input[type="reset"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+      
+        input[type="submit"] {
+          background-color: #4CAF50; /* Color verde */
+          color: white;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+      
+        input[type="submit"]:hover {
+          background-color: #45a049; /* Color verde más oscuro al pasar el ratón */
+        }
+      
+        input[type="reset"] {
+          background-color: #f44336; /* Color rojo */
+          cursor: pointer;
+        }
+      
+        input[type="reset"]:hover {
+          background-color: #d32f2f; /* Color rojo más oscuro al pasar el ratón */
+        }
+      </style>
+      </head>
+      <body>
+      
+      <h2>Formulario de Registro</h2>
+      
+      <form action="/enviar.php" method="post">
+        <label for="nombre">Nombres:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      
+        <label for="apellido">Apellidos:</label>
+        <input type="text" id="apellido" name="apellido" required>
+      
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+      
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+      </form>
+      
+      </body>
+      </html>
